@@ -5,7 +5,33 @@ body, html {
   margin: 0;
   padding: 0; }
 
+h1, h2 {
+  margin: 0; }
+
+.container-wrapper {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  font-family: sans-serif; }
+
 .grid-header {
   color: #fff;
-  background: #FFC0CB;
-  text-align: center; }
+  background: #3f87a6;
+  text-align: center;
+  padding: 15px; }
+
+.grid-section {
+  background-color: #f1f1f1;
+  color: #000;
+  width: 20%; }
+  .grid-section h2 {
+    padding: 8px; }
+  .grid-section ul {
+    text-decoration: none;
+    margin: 0;
+    padding: 0; }
+    .grid-section ul li {
+      display: block;
+      padding: 8px 1px 8px 16px; }
+      .grid-section ul li:hover {
+        background-color: #d3d3d3; }
