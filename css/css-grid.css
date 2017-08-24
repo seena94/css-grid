@@ -36,7 +36,7 @@ h1, h2 {
     .grid-section ul li {
       display: block;
       padding: 8px 1px 8px 16px;
-      curser: pointer; }
+      cursor: pointer; }
       .grid-section ul li:hover {
         background-color: #d3d3d3; }
 
