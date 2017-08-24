@@ -1,6 +1,6 @@
 body, html {
   width: 100%;
-  height: 100%;
+  height: auto;
   position: relative;
   margin: 0;
   padding: 0; }
@@ -12,18 +12,21 @@ h1, h2 {
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+  display: inline-block; }
 
 .grid-header {
   color: #fff;
   background: #3f87a6;
   text-align: center;
+  clear: both;
   padding: 15px; }
 
 .grid-section {
   background-color: #f1f1f1;
   color: #000;
-  width: 20%; }
+  width: 20%;
+  float: left; }
   .grid-section h2 {
     padding: 8px; }
   .grid-section ul {
@@ -32,6 +35,10 @@ h1, h2 {
     padding: 0; }
     .grid-section ul li {
       display: block;
-      padding: 8px 1px 8px 16px; }
+      padding: 8px 1px 8px 16px;
+      curser: pointer; }
       .grid-section ul li:hover {
         background-color: #d3d3d3; }
+
+.content-wrapper {
+  width: 80%; }
