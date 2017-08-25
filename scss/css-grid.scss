@@ -15,11 +15,8 @@ h1,h2 {
 }
 
 .container-wrapper {
-	width: 100%;
-	height:100%;
 	margin: 0 auto;
 	font-family: sans-serif;
-	display: inline-block;
 }
 
 .grid-header {
@@ -30,33 +27,93 @@ h1,h2 {
 	padding: 15px;
 }
 
-.grid-section {
-	background-color: $grid-property-color;
-	color: $color-black;
-	width:20%;
-	float: left;
-
-	h2 {
-		padding: 8px;
-	}
-
-	ul {
-		text-decoration: none;
-    margin: 0;
-    padding: 0;
-
-    li {
-    	display: block;
-    	padding: 8px 1px 8px 16px;
-    	cursor: pointer;
-    	 
-    	&:hover {
-    		background-color: $grid-property-hover-color;
-    	}
-    }
-	}
-}
-
 .content-wrapper {
-	width: 80%;
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+	
+	.grid-section {
+		background-color: $grid-property-color;
+		color: $color-black;
+
+		h2 {
+			padding: 8px;
+		}
+
+		ul {
+			text-decoration: none;
+		    margin: 0;
+		    padding: 0;
+
+		    li {
+		    	padding: 8px 1px 8px 16px;
+		    	cursor: pointer;
+		    	 
+		    	&:hover {
+		    		background-color: $grid-property-hover-color;
+		    	}
+		    }
+		}
+	}
+
+	.grid-content-wrapper {
+		text-align: center;
+    	padding-top: 25px;
+
+    	.demo-wrapper {
+    		display: grid;
+    		color: $color-black;
+    		border: 2px solid #f76707;
+			border-radius: 5px;
+			background-color: #fff4e6;
+    		grid-template-columns: 200px 200px 200px;
+    		margin: 50px 20px 0 40px;
+    	}
+
+    	.demo-value {
+			border: 2px solid #ffa94d;
+			border-radius: 5px;
+			background-color: #ffd8a8;
+			padding: 1em;
+			color: #d9480f;
+		}
+
+		.demo-row-wrapper {
+			@extend .demo-wrapper;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+  			grid-auto-rows: 100px;
+		}
+
+		.demo-column-gap {
+			@extend .demo-wrapper;
+			display: grid;
+			grid-column-gap: 10px;
+		}
+
+		.demo-row-gap {
+			@extend .demo-wrapper;
+			display: grid;
+			grid-row-gap: 10px;
+		}
+
+		.demo-justify-items {
+			@extend .demo-row-gap;
+			justify-items: stretch;
+		}
+
+		.demo-align-items {
+			@extend .demo-row-gap;
+			align-items: end;
+		}
+
+		.demo-justify-content {
+			@extend .demo-wrapper;
+			justify-content: end;
+		}
+
+		.demo-align-content {
+			@extend .demo-wrapper;
+			align-content: end;
+		}
+	}
 }
