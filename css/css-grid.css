@@ -39,7 +39,7 @@ h1, h2 {
   .content-wrapper .grid-content-wrapper {
     text-align: center;
     padding-top: 25px; }
-    .content-wrapper .grid-content-wrapper .demo-wrapper, .content-wrapper .grid-content-wrapper .demo-row-wrapper, .content-wrapper .grid-content-wrapper .demo-column-gap, .content-wrapper .grid-content-wrapper .demo-row-gap, .content-wrapper .grid-content-wrapper .demo-justify-items, .content-wrapper .grid-content-wrapper .demo-align-items, .content-wrapper .grid-content-wrapper .demo-justify-content, .content-wrapper .grid-content-wrapper .demo-align-content {
+    .content-wrapper .grid-content-wrapper .demo-wrapper, .content-wrapper .grid-content-wrapper .demo-row-wrapper, .content-wrapper .grid-content-wrapper .demo-column-gap, .content-wrapper .grid-content-wrapper .demo-row-gap, .content-wrapper .grid-content-wrapper .demo-justify-items, .content-wrapper .grid-content-wrapper .demo-align-items, .content-wrapper .grid-content-wrapper .demo-justify-content, .content-wrapper .grid-content-wrapper .demo-align-content, .content-wrapper .grid-content-wrapper .demo-auto-rows {
       display: grid;
       color: #000;
       border: 2px solid #f76707;
@@ -71,3 +71,16 @@ h1, h2 {
       justify-content: end; }
     .content-wrapper .grid-content-wrapper .demo-align-content {
       align-content: end; }
+    .content-wrapper .grid-content-wrapper .demo-auto-rows {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: minmax(100px, auto); }
+    .content-wrapper .grid-content-wrapper .box1 {
+      grid-column-start: 1;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: 3; }
+    .content-wrapper .grid-content-wrapper .box2 {
+      grid-column-start: 1;
+      grid-row-start: 3;
+      grid-row-end: 5; }
