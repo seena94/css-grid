@@ -1,11 +1,13 @@
-body, html {
+body,
+html {
   width: 100%;
   height: auto;
   position: relative;
   margin: 0;
   padding: 0; }
 
-h1, h2 {
+h1,
+h2 {
   margin: 0; }
 
 .container-wrapper {
@@ -27,60 +29,109 @@ h1, h2 {
     color: #000; }
     .content-wrapper .grid-section h2 {
       padding: 8px; }
-    .content-wrapper .grid-section ul {
-      text-decoration: none;
+    .content-wrapper .grid-section .properties-section {
       margin: 0;
       padding: 0; }
-      .content-wrapper .grid-section ul li {
+      .content-wrapper .grid-section .properties-section .grid-properties {
         padding: 8px 1px 8px 16px;
         cursor: pointer; }
-        .content-wrapper .grid-section ul li:hover {
+        .content-wrapper .grid-section .properties-section .grid-properties:hover, .content-wrapper .grid-section .properties-section .grid-properties.active {
           background-color: #d3d3d3; }
-  .content-wrapper .grid-content-wrapper {
-    text-align: center;
-    padding-top: 25px; }
-    .content-wrapper .grid-content-wrapper .demo-wrapper, .content-wrapper .grid-content-wrapper .demo-row-wrapper, .content-wrapper .grid-content-wrapper .demo-column-gap, .content-wrapper .grid-content-wrapper .demo-row-gap, .content-wrapper .grid-content-wrapper .demo-justify-items, .content-wrapper .grid-content-wrapper .demo-align-items, .content-wrapper .grid-content-wrapper .demo-justify-content, .content-wrapper .grid-content-wrapper .demo-align-content, .content-wrapper .grid-content-wrapper .demo-auto-rows {
-      display: grid;
-      color: #000;
-      border: 2px solid #f76707;
-      border-radius: 5px;
-      background-color: #fff4e6;
-      grid-template-columns: 200px 200px 200px;
-      margin: 50px 20px 0 40px; }
-    .content-wrapper .grid-content-wrapper .demo-value {
-      border: 2px solid #ffa94d;
-      border-radius: 5px;
-      background-color: #ffd8a8;
-      padding: 1em;
-      color: #d9480f; }
-    .content-wrapper .grid-content-wrapper .demo-row-wrapper {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-auto-rows: 100px; }
-    .content-wrapper .grid-content-wrapper .demo-column-gap {
-      display: grid;
-      grid-column-gap: 10px; }
-    .content-wrapper .grid-content-wrapper .demo-row-gap, .content-wrapper .grid-content-wrapper .demo-justify-items, .content-wrapper .grid-content-wrapper .demo-align-items {
-      display: grid;
-      grid-row-gap: 10px; }
-    .content-wrapper .grid-content-wrapper .demo-justify-items {
-      justify-items: stretch; }
-    .content-wrapper .grid-content-wrapper .demo-align-items {
-      align-items: end; }
-    .content-wrapper .grid-content-wrapper .demo-justify-content {
-      justify-content: end; }
-    .content-wrapper .grid-content-wrapper .demo-align-content {
-      align-content: end; }
-    .content-wrapper .grid-content-wrapper .demo-auto-rows {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-auto-rows: minmax(100px, auto); }
-    .content-wrapper .grid-content-wrapper .box1 {
-      grid-column-start: 1;
-      grid-column-end: 4;
-      grid-row-start: 1;
-      grid-row-end: 3; }
-    .content-wrapper .grid-content-wrapper .box2 {
-      grid-column-start: 1;
-      grid-row-start: 3;
-      grid-row-end: 5; }
+
+.grid-content-wrapper {
+  text-align: center;
+  padding-top: 25px;
+  list-style: none; }
+  .grid-content-wrapper .demo-wrapper, .grid-content-wrapper .demo-row-wrapper, .grid-content-wrapper .demo-column-gap, .grid-content-wrapper .demo-row-gap, .grid-content-wrapper .demo-justify-items, .grid-content-wrapper .demo-align-items, .grid-content-wrapper .demo-justify-content, .grid-content-wrapper .demo-align-content, .grid-content-wrapper .demo-auto-flow, .grid-content-wrapper .demo-auto-rows, .grid-content-wrapper .demo-auto-columns, .grid-content-wrapper .page-items {
+    display: grid;
+    color: #000;
+    border: 2px solid #f76707;
+    border-radius: 5px;
+    background-color: #fff4e6;
+    grid-template-columns: 200px 200px 200px;
+    margin: 50px 20px 0 40px; }
+  .grid-content-wrapper .demo-value {
+    border: 2px solid #ffa94d;
+    border-radius: 5px;
+    background-color: #ffd8a8;
+    padding: 1em;
+    color: #d9480f; }
+  .grid-content-wrapper .demo-row-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 100px; }
+  .grid-content-wrapper .demo-column-gap {
+    display: grid;
+    grid-column-gap: 10px; }
+  .grid-content-wrapper .demo-row-gap, .grid-content-wrapper .demo-justify-items, .grid-content-wrapper .demo-align-items {
+    display: grid;
+    grid-row-gap: 10px; }
+  .grid-content-wrapper .demo-justify-items {
+    justify-items: stretch; }
+  .grid-content-wrapper .demo-align-items {
+    align-items: end; }
+  .grid-content-wrapper .demo-justify-content {
+    justify-content: end; }
+  .grid-content-wrapper .demo-align-content {
+    align-content: end; }
+  .grid-content-wrapper .demo-auto-flow {
+    grid-auto-flow: row; }
+  .grid-content-wrapper .demo-auto-rows {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto); }
+  .grid-content-wrapper .demo-auto-columns {
+    grid-template-areas: "a a";
+    grid-gap: 10px;
+    grid-auto-columns: 200px; }
+  .grid-content-wrapper .box1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3; }
+  .grid-content-wrapper .box2 {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    grid-row-end: 5; }
+  .grid-content-wrapper .page-items {
+    grid-template-columns: repeat(3, 1fr); }
+    .grid-content-wrapper .page-items .item-1, .grid-content-wrapper .page-items .item1-align {
+      grid-area: article;
+      justify-self: start;
+      grid-column: 1/2; }
+    .grid-content-wrapper .page-items .item-2, .grid-content-wrapper .page-items .item2-align {
+      grid-area: sidebar;
+      justify-self: start;
+      grid-column: 3/4; }
+    .grid-content-wrapper .page-items .item1-align {
+      align-self: center; }
+    .grid-content-wrapper .page-items .item2-align {
+      align-self: center; }
+  .grid-content-wrapper .page-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 50px 70px 50px;
+    grid-template-areas: "header header header header" "main main . sidebar" "footer footer footer footer";
+    margin: 20px; }
+    .grid-content-wrapper .page-content .item-a {
+      grid-area: header;
+      grid-column: 1/5;
+      border: 1px solid #000;
+      padding-top: 10px; }
+    .grid-content-wrapper .page-content .item-b {
+      grid-area: main;
+      grid-column: 1/2;
+      border-right: 1px solid #000;
+      border-left: 1px solid #000;
+      padding-top: 10px; }
+    .grid-content-wrapper .page-content .item-c {
+      grid-area: sidebar;
+      grid-column: 3/5;
+      border-right: 1px solid #000;
+      border-left: 1px solid #000;
+      padding-top: 10px; }
+    .grid-content-wrapper .page-content .item-d {
+      grid-area: footer;
+      grid-column: 1/5;
+      border: 1px solid #000;
+      padding-top: 10px; }
